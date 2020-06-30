@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Getting Started (DApp) | Beacon SDK Documentation</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Connecting dApps on Tezos with your wallet.">
+    <link rel="preload" href="/assets/css/0.styles.c69812d3.css" as="style"><link rel="preload" href="/assets/js/app.e306405d.js" as="script"><link rel="preload" href="/assets/js/2.bc15e0e0.js" as="script"><link rel="preload" href="/assets/js/7.7e5deabc.js" as="script"><link rel="prefetch" href="/assets/js/10.c3652345.js"><link rel="prefetch" href="/assets/js/11.4b73dbd7.js"><link rel="prefetch" href="/assets/js/12.8da9a13a.js"><link rel="prefetch" href="/assets/js/13.01652adf.js"><link rel="prefetch" href="/assets/js/14.3a18bbe8.js"><link rel="prefetch" href="/assets/js/15.93b72b06.js"><link rel="prefetch" href="/assets/js/16.87bbd1bb.js"><link rel="prefetch" href="/assets/js/17.1f5262dd.js"><link rel="prefetch" href="/assets/js/18.c7f68f25.js"><link rel="prefetch" href="/assets/js/19.3cf41a51.js"><link rel="prefetch" href="/assets/js/20.fbad4344.js"><link rel="prefetch" href="/assets/js/3.5e2250ff.js"><link rel="prefetch" href="/assets/js/4.9f8b21b7.js"><link rel="prefetch" href="/assets/js/5.427a97a4.js"><link rel="prefetch" href="/assets/js/6.a2ee4596.js"><link rel="prefetch" href="/assets/js/8.52305802.js"><link rel="prefetch" href="/assets/js/9.4e07603c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c69812d3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Beacon SDK Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.walletbeacon.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Example dApp
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://chrome.google.com/webstore/detail/gpfndedineagiepkpinficbcbbgjoenn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Chrome Extension
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/airgap-it/beacon-sdk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.walletbeacon.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Example dApp
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://chrome.google.com/webstore/detail/gpfndedineagiepkpinficbcbbgjoenn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Chrome Extension
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/airgap-it/beacon-sdk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Introduction</a></li><li><a href="/CHANGELOG.html" class="sidebar-link">Changelog</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Beacon</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/beacon/02.getting-started-dapp.html" class="active sidebar-link">Getting Started (DApp)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/beacon/02.getting-started-dapp.html#setup" class="sidebar-link">Setup</a></li><li class="sidebar-sub-header"><a href="/beacon/02.getting-started-dapp.html#permission-request" class="sidebar-link">Permission Request</a></li></ul></li><li><a href="/beacon/03.getting-started-wallet.html" class="sidebar-link">Getting Started (Wallet)</a></li><li><a href="/beacon/04.getting-started-extension.html" class="sidebar-link">Getting Started (Extension)</a></li><li><a href="/beacon/05.messages.html" class="sidebar-link">Messages</a></li><li><a href="/beacon/06.errors.html" class="sidebar-link">Errors</a></li><li><a href="/beacon/07.contracts.html" class="sidebar-link">Interacting with Contracts</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Examples</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Flows</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/supported-wallets.html" class="sidebar-link">Supported Wallets</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="getting-started-dapp"><a href="#getting-started-dapp" class="header-anchor">#</a> Getting Started (DApp)</h1> <h2 id="setup"><a href="#setup" class="header-anchor">#</a> Setup</h2> <p>First, you need to install the <code>beacon-sdk</code> package.</p> <p><code>npm install --save @airgap/beacon-sdk</code></p> <h2 id="permission-request"><a href="#permission-request" class="header-anchor">#</a> Permission Request</h2> <p>After that you need to import the beacon SDK in your code and initialize the DAppClient.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconErrorMessage<span class="token punctuation">,</span> DAppClient<span class="token punctuation">,</span> PermissionResponseOutput <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span> <span class="token comment">// Replace '..' with '@airgap/beacon-sdk'</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DAppClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'My Sample DApp'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+client
+  <span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response<span class="token operator">:</span> PermissionResponseOutput</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'permissions'</span><span class="token punctuation">,</span> response<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">permissionError<span class="token operator">:</span> BeaconErrorMessage</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>permissionError<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><p>Ther permission request only has to be done once. When a successful permission response is received, the permissions are stored locally and will be re-used later.</p> <h3 id="setting-the-network"><a href="#setting-the-network" class="header-anchor">#</a> Setting the network</h3> <p>By default, permission will be requested on mainnet. This can be changed by providing a network in the permission request.</p> <div class="language-typescript extra-class"><pre class="language-typescript"><code><span class="token comment">// Mainnet</span>
+<span class="token keyword">const</span> permissionResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Mainnet with different rpcUrl</span>
+<span class="token keyword">const</span> permissionResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  network<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">type</span><span class="token operator">:</span> NetworkType<span class="token punctuation">.</span><span class="token constant">MAINNET</span><span class="token punctuation">,</span>
+    rpcUrl<span class="token operator">:</span> <span class="token string">'https://mainnet.tezos.cryptium.ch/'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Carthagenet with default rpcUrl</span>
+<span class="token keyword">const</span> permissionResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  network<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">type</span><span class="token operator">:</span> NetworkType<span class="token punctuation">.</span><span class="token constant">CARTHAGENET</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Carthagenet with different rpcUrl</span>
+<span class="token keyword">const</span> permissionResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  network<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">type</span><span class="token operator">:</span> NetworkType<span class="token punctuation">.</span><span class="token constant">CARTHAGENET</span><span class="token punctuation">,</span>
+    rpcUrl<span class="token operator">:</span> <span class="token string">'https://carthagenet.tezos.cryptium.ch/'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Custom network (eg. local development)</span>
+<span class="token keyword">const</span> permissionResponse <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  network<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token keyword">type</span><span class="token operator">:</span> NetworkType<span class="token punctuation">.</span><span class="token constant">CUSTOM</span><span class="token punctuation">,</span>
+    name<span class="token operator">:</span> <span class="token string">'Local Node'</span><span class="token punctuation">,</span>
+    rpcUrl<span class="token operator">:</span> <span class="token string">'http://localhost:8732/'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>When using type <code>MAINNET</code> or <code>CARTHAGENET</code>, the block explorer links will point towards a working block explorer to check your transactions. When using type <code>CUSTOM</code>, there is currently no working block explorer available.</p> <p>Please note that ALL properties (type, name, rpcUrl) have to match in order to use existing permissions. If you change any of the properties, the permissions will not be found anymore and you have to do a new permission request.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span>
+  BeaconErrorMessage<span class="token punctuation">,</span>
+  DAppClient<span class="token punctuation">,</span>
+  Network<span class="token punctuation">,</span>
+  NetworkType<span class="token punctuation">,</span>
+  PermissionScope<span class="token punctuation">,</span>
+  TezosTransactionOperation<span class="token punctuation">,</span>
+  TezosOperationType<span class="token punctuation">,</span>
+  OperationResponseOutput<span class="token punctuation">,</span>
+  PermissionResponseOutput
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span> <span class="token comment">// Replace '..' with '@airgap/beacon-sdk'</span>
+
+<span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DAppClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'My Sample DApp'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> network<span class="token operator">:</span> Network <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token keyword">type</span><span class="token operator">:</span> NetworkType<span class="token punctuation">.</span><span class="token constant">CUSTOM</span><span class="token punctuation">,</span>
+  name<span class="token operator">:</span> <span class="token string">'MyLocalNetwork'</span><span class="token punctuation">,</span>
+  rpcUrl<span class="token operator">:</span> <span class="token string">'http://localhost:8888/'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> scopes<span class="token operator">:</span> PermissionScope<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+  PermissionScope<span class="token punctuation">.</span><span class="token constant">OPERATION_REQUEST</span><span class="token punctuation">,</span>
+  PermissionScope<span class="token punctuation">.</span><span class="token constant">SIGN</span><span class="token punctuation">,</span>
+  PermissionScope<span class="token punctuation">.</span><span class="token constant">THRESHOLD</span>
+<span class="token punctuation">]</span>
+
+client
+  <span class="token punctuation">.</span><span class="token function">requestPermissions</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    network<span class="token punctuation">,</span>
+    scopes
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">permissionResponse<span class="token operator">:</span> PermissionResponseOutput</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      permissionResponse<span class="token punctuation">.</span>scopes<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>
+        <span class="token punctuation">(</span><span class="token parameter">permission<span class="token operator">:</span> PermissionScope</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> permission <span class="token operator">===</span> PermissionScope<span class="token punctuation">.</span><span class="token constant">OPERATION_REQUEST</span>
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> operation<span class="token operator">:</span> Partial<span class="token operator">&lt;</span>TezosTransactionOperation<span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        kind<span class="token operator">:</span> TezosOperationType<span class="token punctuation">.</span><span class="token constant">TRANSACTION</span><span class="token punctuation">,</span>
+        amount<span class="token operator">:</span> <span class="token string">'1234567'</span><span class="token punctuation">,</span>
+        destination<span class="token operator">:</span> <span class="token string">'tz1MJx9vhaNRSimcuXPK2rW4fLccQnDAnVKJ'</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">const</span> operationResponse<span class="token operator">:</span> OperationResponseOutput <span class="token operator">=</span> <span class="token keyword">await</span> client<span class="token punctuation">.</span><span class="token function">requestOperation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        operationDetails<span class="token operator">:</span> <span class="token punctuation">[</span>operation<span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+      <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>
+        <span class="token string">'operation was successfully broadcast to the network with the hash: '</span><span class="token punctuation">,</span>
+        operationResponse<span class="token punctuation">.</span>transactionHash
+      <span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">permissionError<span class="token operator">:</span> BeaconErrorMessage</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>permissionError<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="other"><a href="#other" class="header-anchor">#</a> Other</h3> <p>The <code>beacon-sdk</code> will automatically try to establish a connection.</p> <p>If a chrome extension is detected, all requests will be directed to the chrome extension.</p> <p>If no chrome extension is detected, it will fall back to the beacon p2p transport layer, which means that a QR code is shown that has to be scanned by a compatible wallet. As of now, the only mobile wallet with Beacon supprt is <a href="https://github.com/airgap-it/airgap-wallet/releases/" target="_blank" rel="noopener noreferrer">AirGap Wallet<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. You can download the app from Github or the Play Store (Android) or the AppStore (iOS).</p> <p>More complex examples can be found <a href="/examples/">here</a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">6/8/2020, 5:07:59 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/CHANGELOG.html" class="prev">
+        Changelog
+      </a></span> <span class="next"><a href="/beacon/03.getting-started-wallet.html">
+        Getting Started (Wallet)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.e306405d.js" defer></script><script src="/assets/js/2.bc15e0e0.js" defer></script><script src="/assets/js/7.7e5deabc.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Errors | Beacon SDK Documentation</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="Connecting dApps on Tezos with your wallet.">
+    <link rel="preload" href="/assets/css/0.styles.c69812d3.css" as="style"><link rel="preload" href="/assets/js/app.e306405d.js" as="script"><link rel="preload" href="/assets/js/2.bc15e0e0.js" as="script"><link rel="preload" href="/assets/js/11.4b73dbd7.js" as="script"><link rel="prefetch" href="/assets/js/10.c3652345.js"><link rel="prefetch" href="/assets/js/12.8da9a13a.js"><link rel="prefetch" href="/assets/js/13.01652adf.js"><link rel="prefetch" href="/assets/js/14.3a18bbe8.js"><link rel="prefetch" href="/assets/js/15.93b72b06.js"><link rel="prefetch" href="/assets/js/16.87bbd1bb.js"><link rel="prefetch" href="/assets/js/17.1f5262dd.js"><link rel="prefetch" href="/assets/js/18.c7f68f25.js"><link rel="prefetch" href="/assets/js/19.3cf41a51.js"><link rel="prefetch" href="/assets/js/20.fbad4344.js"><link rel="prefetch" href="/assets/js/3.5e2250ff.js"><link rel="prefetch" href="/assets/js/4.9f8b21b7.js"><link rel="prefetch" href="/assets/js/5.427a97a4.js"><link rel="prefetch" href="/assets/js/6.a2ee4596.js"><link rel="prefetch" href="/assets/js/7.7e5deabc.js"><link rel="prefetch" href="/assets/js/8.52305802.js"><link rel="prefetch" href="/assets/js/9.4e07603c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c69812d3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Beacon SDK Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.walletbeacon.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Example dApp
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://chrome.google.com/webstore/detail/gpfndedineagiepkpinficbcbbgjoenn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Chrome Extension
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/airgap-it/beacon-sdk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.walletbeacon.io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Example dApp
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://chrome.google.com/webstore/detail/gpfndedineagiepkpinficbcbbgjoenn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Chrome Extension
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/airgap-it/beacon-sdk" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/" class="sidebar-link">Introduction</a></li><li><a href="/CHANGELOG.html" class="sidebar-link">Changelog</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Beacon</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/beacon/02.getting-started-dapp.html" class="sidebar-link">Getting Started (DApp)</a></li><li><a href="/beacon/03.getting-started-wallet.html" class="sidebar-link">Getting Started (Wallet)</a></li><li><a href="/beacon/04.getting-started-extension.html" class="sidebar-link">Getting Started (Extension)</a></li><li><a href="/beacon/05.messages.html" class="sidebar-link">Messages</a></li><li><a href="/beacon/06.errors.html" class="active sidebar-link">Errors</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#broadcastbeaconerror" class="sidebar-link">BroadcastBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#networknotsupportedbeaconerror" class="sidebar-link">NetworkNotSupportedBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#noaddressbeaconerror" class="sidebar-link">NoAddressBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#noprivatekeybeaconerror" class="sidebar-link">NoPrivateKeyBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#notgrantedbeaconerror" class="sidebar-link">NotGrantedBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#parametersinvalidbeaconerror" class="sidebar-link">ParametersInvalidBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#toomanyoperationsbeaconerror" class="sidebar-link">TooManyOperationsBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#transactioninvalidbeaconerror" class="sidebar-link">TransactionInvalidBeaconError</a></li><li class="sidebar-sub-header"><a href="/beacon/06.errors.html#unknownbeaconerror" class="sidebar-link">UnknownBeaconError</a></li></ul></li><li><a href="/beacon/07.contracts.html" class="sidebar-link">Interacting with Contracts</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Examples</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Flows</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/supported-wallets.html" class="sidebar-link">Supported Wallets</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="errors"><a href="#errors" class="header-anchor">#</a> Errors</h1> <p>The errors used in the beacon communication are defined in the <a href="https://gitlab.com/tzip/tzip/tree/master/proposals/tzip-10" target="_blank" rel="noopener noreferrer">tzip-10 proposal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p> <p>If the wallet encounters an error while processing a request, the response will use the <code>BeaconBaseMessage</code> described <a href="/beacon/05.messages">here</a> and additionally add a <code>BeaconErrorType</code>.</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconBaseMessage<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">BeaconErrorMessage</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconBaseMessage</span> <span class="token punctuation">{</span>
+  errorType<span class="token operator">:</span> BeaconErrorType
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">export</span> <span class="token keyword">enum</span> BeaconErrorType <span class="token punctuation">{</span>
+  <span class="token constant">BROADCAST_ERROR</span> <span class="token operator">=</span> <span class="token string">'BROADCAST_ERROR'</span><span class="token punctuation">,</span> <span class="token comment">// Broadcast | Operation Request: Will be returned if the user choses that the transaction is broadcast but there is an error (eg. node not available).</span>
+  <span class="token constant">NETWORK_NOT_SUPPORTED</span> <span class="token operator">=</span> <span class="token string">'NETWORK_NOT_SUPPORTED'</span><span class="token punctuation">,</span> <span class="token comment">// Permission: Will be returned if the selected network is not supported by the wallet / extension.</span>
+  <span class="token constant">NO_ADDRESS_ERROR</span> <span class="token operator">=</span> <span class="token string">'NO_ADDRESS_ERROR'</span><span class="token punctuation">,</span> <span class="token comment">// Permission: Will be returned if there is no address present for the protocol / network requested.</span>
+  <span class="token constant">NO_PRIVATE_KEY_FOUND_ERROR</span> <span class="token operator">=</span> <span class="token string">'NO_PRIVATE_KEY_FOUND_ERROR'</span><span class="token punctuation">,</span> <span class="token comment">// Sign: Will be returned if the private key matching the sourceAddress could not be found.</span>
+  <span class="token constant">NOT_GRANTED_ERROR</span> <span class="token operator">=</span> <span class="token string">'NOT_GRANTED_ERROR'</span><span class="token punctuation">,</span> <span class="token comment">// Sign: Will be returned if the signature was blocked // (Not needed?) Permission: Will be returned if the permissions requested by the App were not granted.</span>
+  <span class="token constant">PARAMETERS_INVALID_ERROR</span> <span class="token operator">=</span> <span class="token string">'PARAMETERS_INVALID_ERROR'</span><span class="token punctuation">,</span> <span class="token comment">// Operation Request: Will be returned if any of the parameters are invalid.</span>
+  <span class="token constant">TOO_MANY_OPERATIONS</span> <span class="token operator">=</span> <span class="token string">'TOO_MANY_OPERATIONS'</span><span class="token punctuation">,</span> <span class="token comment">// Operation Request: Will be returned if too many operations were in the request and they were not able to fit into a single operation group.</span>
+  <span class="token constant">TRANSACTION_INVALID_ERROR</span> <span class="token operator">=</span> <span class="token string">'TRANSACTION_INVALID_ERROR'</span><span class="token punctuation">,</span> <span class="token comment">// Broadcast: Will be returned if the transaction is not parsable or is rejected by the node.</span>
+  <span class="token constant">UNKNOWN_ERROR</span> <span class="token operator">=</span> <span class="token string">'UNKNOWN_ERROR'</span> <span class="token comment">// Used as a wildcard if an unexpected error occured.</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="broadcastbeaconerror"><a href="#broadcastbeaconerror" class="header-anchor">#</a> BroadcastBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">BroadcastBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'BroadcastBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Broadcast Error'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">BROADCAST_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'The transaction could not be broadcast to the network. Please try again.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="networknotsupportedbeaconerror"><a href="#networknotsupportedbeaconerror" class="header-anchor">#</a> NetworkNotSupportedBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NetworkNotSupportedBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'NetworkNotSupportedBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Network Error'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">NETWORK_NOT_SUPPORTED</span><span class="token punctuation">,</span>
+      <span class="token string">'The wallet does not support this network. Please chose another one.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="noaddressbeaconerror"><a href="#noaddressbeaconerror" class="header-anchor">#</a> NoAddressBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NoAddressBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'NoAddressBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'No Address'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">NO_ADDRESS_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'The wallet does not have an account set up. Please make sure to set up your wallet and try again.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="noprivatekeybeaconerror"><a href="#noprivatekeybeaconerror" class="header-anchor">#</a> NoPrivateKeyBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NoPrivateKeyBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'NoPrivateKeyBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Account Not Found'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">NO_PRIVATE_KEY_FOUND_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'The account you are trying to interact with is not available. Please make sure to add the account to your wallet and try again.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="notgrantedbeaconerror"><a href="#notgrantedbeaconerror" class="header-anchor">#</a> NotGrantedBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">NotGrantedBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'NotGrantedBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Permission Not Granted'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">NOT_GRANTED_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'You do not have the necessary permissions to perform this action. Please initiate another permission request and give the necessary permissions.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="parametersinvalidbeaconerror"><a href="#parametersinvalidbeaconerror" class="header-anchor">#</a> ParametersInvalidBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">ParametersInvalidBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'ParametersInvalidBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Parameters Invalid'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">PARAMETERS_INVALID_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'Some of the parameters you provided are invalid and the request could not be completed. Please check your inputs and try again.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="toomanyoperationsbeaconerror"><a href="#toomanyoperationsbeaconerror" class="header-anchor">#</a> TooManyOperationsBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">TooManyOperationsBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'TooManyOperationsBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Too Many Operations'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">TOO_MANY_OPERATIONS</span><span class="token punctuation">,</span>
+      <span class="token string">'The request contains too many transactions. Please include fewer operations and try again.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="transactioninvalidbeaconerror"><a href="#transactioninvalidbeaconerror" class="header-anchor">#</a> TransactionInvalidBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">TransactionInvalidBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'TransactionInvalidBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Transaction Invalid'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">TRANSACTION_INVALID_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'The transaction is invalid and the node did not accept it.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="unknownbeaconerror"><a href="#unknownbeaconerror" class="header-anchor">#</a> UnknownBeaconError</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> BeaconError<span class="token punctuation">,</span> BeaconErrorType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'..'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">class</span> <span class="token class-name">UnknownBeaconError</span> <span class="token keyword">extends</span> <span class="token class-name">BeaconError</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> name<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'UnknownBeaconError'</span>
+  <span class="token keyword">public</span> title<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'Error'</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>
+      BeaconErrorType<span class="token punctuation">.</span><span class="token constant">UNKNOWN_ERROR</span><span class="token punctuation">,</span>
+      <span class="token string">'An unknown error occured. Please try again or report it to a developer.'</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/16/2020, 4:23:20 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/beacon/05.messages.html" class="prev">
+        Messages
+      </a></span> <span class="next"><a href="/beacon/07.contracts.html">
+        Interacting with Contracts
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.e306405d.js" defer></script><script src="/assets/js/2.bc15e0e0.js" defer></script><script src="/assets/js/11.4b73dbd7.js" defer></script>
+  </body>
+</html>
